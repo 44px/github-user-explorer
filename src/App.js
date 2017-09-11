@@ -6,8 +6,11 @@ import UserPage from './user/UserPage';
 
 export default class App extends Component {
     render() {
+        const basename = process.env.NODE_ENV === 'production'
+            ? '/github-user-explorer'
+            : '/';
         return (
-            <Router>
+            <Router basename={basename}>
                 <div className='container-fluid'>
                     <PageHeader>
                         <Link to='/'>GitHub User Explorer</Link>
