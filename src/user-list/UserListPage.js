@@ -42,7 +42,7 @@ export default class UserListPage extends Component {
     }
 
     onSearchStringChange(q) {
-        this.onQueryChange({q});
+        this.onQueryChange({q, page: 1});
     }
 
     onPageChange(page) {
