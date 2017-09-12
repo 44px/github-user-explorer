@@ -45,7 +45,10 @@ export default class SearchForm extends Component {
                     />
                 </FormGroup>
                 {' '}
-                <Button type='submit'>Submit</Button>
+                <Button type='submit'
+                        disabled={this.state.query.length === 0}>
+                    Submit
+                </Button>
             </Form>
         );
     }
